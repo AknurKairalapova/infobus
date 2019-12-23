@@ -27,7 +27,10 @@ class Infobus extends Component {
     return (
       <div className="infobus">
         <MapContainer />
-        <Sidebar handleRouteSelect={this.handleRouteSelect}/>
+        <Sidebar
+          selectedRoutes={this.state.selectedRoutes}
+          handleRouteSelect={this.handleRouteSelect}
+        />
       </div>
     );
   }

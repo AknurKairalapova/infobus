@@ -1,5 +1,6 @@
 import React from 'react';
 import { routes } from '../data';
+import RoutesListItem from './RoutesListItem';
 
 const Sidebar = props => {
   const handleRouteClick = (item) => {
@@ -7,11 +8,14 @@ const Sidebar = props => {
   };
 
   const routesListItems = routes.map((item, index) => {
-    const name = item.number + ' - "' + item.name + '"';
     return (
-      <li key={index} onClick={() => handleRouteClick(item)}>
-        {name}
-      </li>
+      <RoutesListItem 
+        key={index}
+        index={index}
+        item={item}
+        selectedRoutes={props.selectedRoutes}
+        handleRouteClick={handleRouteClick}
+      />
     );
   });
 

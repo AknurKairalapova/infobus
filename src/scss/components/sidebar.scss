@@ -1,6 +1,11 @@
 .sidebar {
   width: 350px;
+  color: #fff;
   border-left: 1px solid #fff;
 
-
+  ul {
+    li.selected {
+      color: red;
+    }
+  }
 }
