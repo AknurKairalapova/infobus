@@ -1,3 +1,9 @@
-.infobus__map {
+.infobus__map-container {
+  flex: 1;
+}
 
+.infobus__map {
+  height: 100vh;
+  // height: 200px;
+  width: 100%;
 }
